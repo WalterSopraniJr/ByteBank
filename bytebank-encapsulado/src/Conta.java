@@ -1,13 +1,16 @@
 public class Conta {
 	private double saldo; //não permite ser modificado fora da classe
-	int agencia;
-	int numero;
-	Cliente titular;
+	private int agencia;
+	private int numero;
+	private Cliente titular;
+	private static int total;  //statico da classe, para não ser construido varios independentes por conta.
 	
 	public Conta(int agencia, int numero) {
+		total++;
+		System.out.println("O total de contas é " + total);
 		this.agencia = agencia;
 		this.numero = numero;
-		System.out.println("Criando uma conta");
+		System.out.println("Criando uma conta " + this.numero);
 	}
 	
 	void deposita(double valor) {
@@ -68,5 +71,11 @@ public class Conta {
 	public Cliente getTitular() {
 		return titular;
 	}
+	
+	public static int getTotal() {
+		return total;
+	}
+	
+	
 	
 }
