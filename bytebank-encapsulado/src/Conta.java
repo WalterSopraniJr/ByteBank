@@ -3,13 +3,14 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
-	private static int total;  //statico da classe, para não ser construido varios independentes por conta.
+	private static int total = 0;  //statico da classe, para não ser construido varios independentes por conta.
 	
 	public Conta(int agencia, int numero) {
 		total++;
-		System.out.println("O total de contas é " + total);
+		System.out.println("O total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
+		this.saldo = 0;
 		System.out.println("Criando uma conta " + this.numero);
 	}
 	
@@ -69,11 +70,16 @@ public class Conta {
 	}
 	
 	public Cliente getTitular() {
-		return titular;
+		return this.titular;
 	}
 	
 	public static int getTotal() {
-		return total;
+		return Conta.total;
+	}
+
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
