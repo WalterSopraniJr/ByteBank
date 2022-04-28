@@ -10,6 +10,7 @@ public class DeclaraGerente {
 		System.out.println("Gerente: " + walter.getNome());
 		System.out.println("CPF: " + walter.getCpf());
 		System.out.println("Salário: " + walter.getSalario());
+		System.out.println("Bonificação: " + walter.getBonificacao());
 		
 		walter.setSenha(0001);
 		boolean autenticou = walter.autentica(0001);
