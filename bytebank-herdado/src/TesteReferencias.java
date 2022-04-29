@@ -18,6 +18,6 @@ public class TesteReferencias {
 		controle.registra(marcelo);
 		controle.registra(marcos);
 		
-		System.out.println("Total pago pela empresa em Bonificação: R$ " + controle.getSoma());
+		System.out.println("Total pago pela empresa em bonificação: R$ " + controle.getSoma());
 	}
 }
