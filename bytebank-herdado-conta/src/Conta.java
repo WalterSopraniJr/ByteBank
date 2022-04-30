@@ -5,13 +5,14 @@ public class Conta {
 	private Cliente titular;
 	private static int total = 0;  //statico da classe, para não ser construido varios independentes por conta.
 	
+	
 	public Conta(int agencia, int numero) {
 		total++;
-		System.out.println("O total de contas é " + Conta.total);
+		//System.out.println("O total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
 		this.saldo = 0;
-		System.out.println("Criando uma conta " + this.numero);
+		//System.out.println("Criando uma conta " + this.numero);
 	}
 	
 	void deposita(double valor) {
@@ -28,8 +29,8 @@ public class Conta {
 	}
 	
 	public boolean transfere(double valor, Conta destino) {
-		if(this.saldo >= valor) {
-			this.saldo -= valor;
+		if(this.saca(valor)) {
+//			this.saldo -= valor;
 			destino.deposita(valor);
 			return true;
 		} else {
