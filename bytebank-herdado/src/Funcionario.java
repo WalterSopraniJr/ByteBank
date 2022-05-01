@@ -1,4 +1,4 @@
-
+//o abstract não permite instanciar novas declarações, apenas em gerente, supervisor ou operador
 public abstract class Funcionario {
 	private String nome;
 	private String cpf;
