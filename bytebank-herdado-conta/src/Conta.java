@@ -1,5 +1,5 @@
-public class Conta {
-	private double saldo; //não permite ser modificado fora da classe
+public abstract class Conta {
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente titular;
@@ -8,16 +8,12 @@ public class Conta {
 	
 	public Conta(int agencia, int numero) {
 		total++;
-		//System.out.println("O total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
 		this.saldo = 0;
-		//System.out.println("Criando uma conta " + this.numero);
 	}
 	
-	void deposita(double valor) {
-		this.saldo += valor;
-	}
+	public abstract void deposita(double valor);
 	
 	public boolean saca(double valor) {
 		if(this.saldo >= valor) {
