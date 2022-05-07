@@ -11,7 +11,7 @@ public class Fluxo {
 			System.out.println("Exception" + msg);
 			ex.printStackTrace();
 		} 
-		System.out.println("Fim do metodo1");
+		System.out.println("Fim do main");
 	}
 
 	private static void metodo1() {
@@ -22,12 +22,9 @@ public class Fluxo {
 
 	private static void metodo2() {
 		System.out.println("Ini do metodo2");
-		for (int i = 1; i <= 5; i++) {
-			System.out.println(i);
-			//int a = i / 0;
-			Conta c = null;
-			c.deposita();
-		}
-		System.out.println("Fim do metodo2");
+		
+		throw new ArithmeticException(" Problema detectado");
+		
+		//System.out.println("Fim do metodo2");
 	}
 }
